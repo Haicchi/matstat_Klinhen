@@ -1,10 +1,10 @@
 ---
 title: "Zvit-Lab-1"
-format: html
 editor: visual
+format: gfm
 ---
 
-## Лабораторна  робота №1 . Основи роботи з Git. Налаштування Git-GitHub середовища
+## Лабораторна робота №1 . Основи роботи з Git. Налаштування Git-GitHub середовища
 
 ## Author - Kyrylo Klingen
 
