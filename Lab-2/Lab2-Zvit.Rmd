@@ -1,0 +1,60 @@
+---
+title: "Lab2-ZVIT"
+author: "Klinhen Kyrylo"
+date: "2025-11-26"
+output:
+#   pdf_document:
+#     highlight: tango
+#     toc: yes
+  html_notebook:
+    toc: yes # Генерація змісту документа
+    toc_float: true
+    highlight: tango # Колір підсвічування коду
+fontsize: 12pt # розмір шрифту
+header-includes:
+ \usepackage[T2A]{fontenc}
+ \usepackage[utf8]{inputenc}
+ \usepackage[russian]{babel}
+editor_options: 
+  chunk_output_type: inline
+bibliography: references_lab.bib # им'я файлу з БД бібіліографічних посилань
+---
+Лабораторна робота №1 . Основи роботи з Git. Налаштування Git-GitHub середовища
+
+Author - Kyrylo Klingen
+
+Мета : швидкий старт для роботи із системою контроля версій (СКВ) Git та віддаленим репозиторієм GitHub.
+
+1 . Створити аккаунт на GitHub і налаштувати доступ до нього (за SSH, або https протоколом).
+```{r echo=TRUE}
+
+# Задаємо параметри функції
+b0 <- 2
+b1 <- 3
+b2 <- 1.57
+
+# Задаємо область визначення
+
+x <- seq(-10, 10, 0.1)
+y <- sin(x) * x
+
+
+plot(x, y,
+     type = "l",
+     col = "red",
+     main = "Графік функції",
+     xlab = "x",
+     ylab = "y"
+     )
+points(x, y,
+       col = "blue")
+
+df <- data.frame(x = x, y = y) 
+
+```
+
+
+
+
+
+
