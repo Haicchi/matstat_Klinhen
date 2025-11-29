@@ -1,23 +1,10 @@
 ---
 title: "Lab2-ZVIT"
 author: "Klinhen Kyrylo"
-date: "2025-11-26"
+date: "2025-11-29"
 output:
-#   pdf_document:
-#     highlight: tango
-#     toc: yes
-  html_notebook:
-    toc: yes # Генерація змісту документа
-    toc_float: true
-    highlight: tango # Колір підсвічування коду
-fontsize: 12pt # розмір шрифту
-header-includes:
- \usepackage[T2A]{fontenc}
- \usepackage[utf8]{inputenc}
- \usepackage[russian]{babel}
-editor_options: 
-  chunk_output_type: inline
-bibliography: references_lab.bib # им'я файлу з БД бібіліографічних посилань
+  github_document:
+    toc: yes
 ---
 Лабораторна робота №1 . Основи роботи з Git. Налаштування Git-GitHub середовища
 
@@ -26,7 +13,7 @@ Author - Kyrylo Klingen
 Мета : швидкий старт для роботи із системою контроля версій (СКВ) Git та віддаленим репозиторієм GitHub.
 
 1 . Створити аккаунт на GitHub і налаштувати доступ до нього (за SSH, або https протоколом).
-```{r echo=TRUE}
+```{r echo=TRUE,dev='svg'}
 
 # Задаємо параметри функції
 b0 <- 2
@@ -55,9 +42,10 @@ df <- data.frame(x = x, y = y)
 
 
 ```{r}
-library(rio) # підключення пакету
+library(rio)
+library(knitr)
 export(df, "data/data.csv")
-DT::datatable(df)
+knitr::kable(head(df), caption = "Табл. 1. Фрагмент даних", align = "c")
 ```
 ```{r}
 dfNew <- import("data/data.csv")
@@ -116,14 +104,14 @@ plot_obj <- df %>%
 
 print(plot_obj)
 
-df %>%
-  datatable(caption = "Таблиця 1. Фрагмент даних")
+  df %>%
+  knitr::kable(caption = "Таблиця 1. Фрагмент даних", align = "c")
 
 data.frame(
   Параметр = c("$b_0$", "$b_1$", "$b_2$", "$x_{min}$", "$x_{max}$"),
   Значення = c(b0, b1, b2, min(df$x), max(df$x))
 ) %>%
-  kable(caption = "Табл. 2. Параметри функції",
+  knitr::kable(caption = "Табл. 2. Параметри функції",
         escape = FALSE,
         align = "c")
 ```
