@@ -195,28 +195,8 @@ if(aic_poly < aic_lin - 10) {
 **7 . Контрольні питання**
 <center>
 
-1.  Запишіть систему нормальних рівнянь у матричному вигляді. - $$
-    \begin{pmatrix}
-    n & \sum x_{i1} & \cdots & \sum x_{ik} \\
-    \sum x_{i1} & \sum x_{i1}^2 & \cdots & \sum x_{i1}x_{ik} \\
-    \vdots & \vdots & \ddots & \vdots \\
-    \sum x_{ik} & \sum x_{ik}x_{i1} & \cdots & \sum x_{ik}^2
-    \end{pmatrix}
-    \cdot
-    \begin{pmatrix}
-    \hat{\beta}_0 \\
-    \hat{\beta}_1 \\
-    \vdots \\
-    \hat{\beta}_k
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-    \sum y_i \\
-    \sum x_{i1}y_i \\
-    \vdots \\
-    \sum x_{ik}y_i
-    \end{pmatrix}
-    $$
+1.  Запишіть систему нормальних рівнянь у матричному вигляді. -
+    (XTX)β^​=XTY
 
 2.  Як визначається надійна зона регресії? - Надійна зона регресії
     (довірчий інтервал) будується шляхом додавання та віднімання від
